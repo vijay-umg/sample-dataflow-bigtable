@@ -1,0 +1,118 @@
+{
+    "type": "record",
+    "name": "artist_daily_by_territory",
+    "fields": [
+        {
+            "name": "master_artist_id",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        {
+            "name": "day",
+            "type": [
+                "long",
+                "null"
+            ]
+        },
+        {
+            "name": "country_subdivision_code",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        {
+            "name": "sub_account_code",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        {
+            "name": "units",
+            "type": [
+                "double",
+                "null"
+            ]
+        },
+        {
+            "name": "physical_album_units",
+            "type": [
+                "double",
+                "null"
+            ]
+        },
+        {
+            "name": "digital_album_units",
+            "type": [
+                "double",
+                "null"
+            ]
+        },
+        {
+            "name": "digital_track_units",
+            "type": [
+                "double",
+                "null"
+            ]
+        },
+        {
+            "name": "stream_units",
+            "type": [
+                "double",
+                "null"
+            ]
+        },
+        {
+            "name": "airplay_units",
+            "type": [
+                "double",
+                "null"
+            ]
+        },
+        {
+            "name": "euro",
+            "type": [
+                "double",
+                "null"
+            ]
+        },
+        {
+            "name": "physical_album_euro",
+            "type": [
+                "double",
+                "null"
+            ]
+        },
+        {
+            "name": "digital_album_euro",
+            "type": [
+                "double",
+                "null"
+            ]
+        },
+        {
+            "name": "digital_track_euro",
+            "type": [
+                "double",
+                "null"
+            ]
+        },
+        {
+            "name": "stream_euro",
+            "type": [
+                "double",
+                "null"
+            ]
+        },
+        {
+            "name": "airplay_euro",
+            "type": [
+                "double",
+                "null"
+            ]
+        }
+    ]
+}

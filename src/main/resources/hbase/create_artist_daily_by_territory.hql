@@ -1,0 +1,1 @@
+create 'artist_daily_by_territory', 'stream_units', 'stream_euro', 'physical_album_units', 'digital_album_units', 'digital_track_units', 'physical_album_euro', 'digital_album_euro', 'digital_track_euro'

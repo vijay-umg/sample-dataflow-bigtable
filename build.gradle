@@ -1,0 +1,54 @@
+group 'com.test.bigtable'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.22'
+    compile 'com.google.cloud.dataflow:google-cloud-dataflow-java-sdk-all:1.9.0'
+    /*compile "org.slf4j:slf4j-nop:1.7.14+"
+    compile group: 'org.hamcrest', name: 'hamcrest-junit', version: '2.0.0.0'
+    compile "com.fasterxml.jackson.core:jackson-databind:2.7.4+"*/
+    compile "org.apache.commons:commons-lang3:3.4"
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    //compile group: 'org.apache.commons', name: 'commons-io', version: '1.3.2'
+    compile "org.apache.avro:avro:1.7.7"
+    compile group: 'com.google.cloud.bigtable', name: 'bigtable-hbase-dataflow', version: '0.9.4'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+mainClassName = "com.test.dataflow.batch.BigtableDataIngestor"
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Consumption Speed Layer Full Rebuild Pipeline',
+                'Implementation-Version': version,
+                'Main-Class': mainClassName
+
+    }
+    baseName 'sample-dataflow-bigtable'
+}
+
+task resources {
+    def resourcesDir = new File("build/resources/main")
+    resourcesDir.mkdirs()
+}
+
+
+run {
+
+    if (project.hasProperty("args")) {
+        args project.args.split("\\s")
+    }
+}
+
+run.mustRunAfter 'resources'
